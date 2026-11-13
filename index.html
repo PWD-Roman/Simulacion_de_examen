@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142d3d">
+  <meta name="description" content="Estudio, práctica y simulacros del Examen General de Egreso basados en la guía temática.">
+  <title>Egreso Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23142d3d'/%3E%3Cpath d='M15 18h34v8H24v7h21v8H24v7h25v8H15z' fill='%23d9f99d'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Egreso Studio, inicio">
+        <span class="brand-mark">E</span>
+        <span><strong>EGRESO</strong><small>STUDIO</small></span>
+      </a>
+      <div class="guide-label"><span class="status-dot"></span> Guía EGE · 300 reactivos</div>
+      <nav class="main-nav" id="main-nav">
+        <button class="nav-item" data-route="inicio"><span data-icon="home"></span>Inicio</button>
+        <button class="nav-item" data-route="repasar"><span data-icon="book"></span>Repasar temas</button>
+        <button class="nav-item" data-route="practica"><span data-icon="practice"></span>Práctica por tema</button>
+        <button class="nav-item" data-route="simulacro"><span data-icon="timer"></span>Simulacro global</button>
+        <button class="nav-item" data-route="calculadora"><span data-icon="calculator"></span>Calculadora IPv4</button>
+        <button class="nav-item" data-route="progreso"><span data-icon="chart"></span>Mi progreso</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="btn btn-secondary language-toggle" id="language-toggle" type="button" aria-label="Switch language">English</button>
+        <div class="sidebar-stat"><span id="sidebar-answered">0</span><small>respuestas registradas</small></div>
+        <a class="source-link" href="examen.pdf" target="_blank" rel="noopener"><span data-icon="file"></span>Consultar guía original <span aria-hidden="true">↗</span></a>
+        <p>Tu progreso se guarda solo en este dispositivo.</p>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="mobile-header">
+        <a class="brand compact" href="#inicio"><span class="brand-mark">E</span><span><strong>EGRESO</strong><small>STUDIO</small></span></a>
+        <button class="btn btn-secondary btn-sm language-toggle" id="language-toggle-mobile" type="button" aria-label="Switch language">English</button>
+        <button class="icon-button" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span data-icon="menu"></span></button>
+      </header>
+      <main id="main-content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <dialog id="app-dialog" class="app-dialog">
+    <div id="dialog-content"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="break-banner" class="break-banner" role="status" aria-live="polite"></div>
+
+  <script src="content.js"></script>
+  <script src="engine.js"></script>
+  <script src="calculator.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
